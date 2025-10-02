@@ -7,7 +7,6 @@ const Hero = () => {
   const roles = [
     "Software Developer",
     "Problem Solver",
-    "Full Stack Developer",
     "Competitive Programmer"
   ];
 
@@ -28,7 +27,7 @@ const Hero = () => {
             <span className="gradient-text">AYUSH PATEL</span>
           </h1>
           <div className="hero-role">
-            <span className="role-text">I'm a </span>
+            <span className="role-text">I'm </span>
             <div className="role-animation">
               {roles.map((role, index) => (
                 <span key={index} className="role-item">{role}</span>
