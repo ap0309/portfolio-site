@@ -18,6 +18,10 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -27,24 +31,30 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-container">
-        <div className="navbar-logo" onClick={() => scrollToSection('home')}>
-          <span className="logo-text">AYUSH PATEL</span>
+    <>
+      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="navbar-container">
+          <div className="navbar-logo" onClick={() => scrollToSection('home')}>
+            <span className="logo-text">AYUSH PATEL</span>
+          </div>
+          <button className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Toggle menu">
+            <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+          </button>
+          <div className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
+            <a href="#home" onClick={() => scrollToSection('home')}>Home</a>
+            <a href="#education" onClick={() => scrollToSection('education')}>Education</a>
+            <a href="#skills" onClick={() => scrollToSection('skills')}>Skills</a>
+            <a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a>
+            <a href="#leadership" onClick={() => scrollToSection('leadership')}>Experience</a>
+            <a href="#achievements" onClick={() => scrollToSection('achievements')}>Achievements</a>
+          </div>
         </div>
-        <button className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Toggle menu">
-          <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
-        </button>
-        <div className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
-          <a href="#home" onClick={() => scrollToSection('home')}>Home</a>
-          <a href="#education" onClick={() => scrollToSection('education')}>Education</a>
-          <a href="#skills" onClick={() => scrollToSection('skills')}>Skills</a>
-          <a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a>
-          <a href="#leadership" onClick={() => scrollToSection('leadership')}>Experience</a>
-          <a href="#achievements" onClick={() => scrollToSection('achievements')}>Achievements</a>
-        </div>
-      </div>
-    </nav>
+      </nav>
+      <div 
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+        onClick={closeMobileMenu}
+      />
+    </>
   );
 };
 

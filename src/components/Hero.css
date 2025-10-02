@@ -96,23 +96,26 @@
 .hero-role {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 2rem;
   animation: fadeInUp 0.8s ease 0.4s;
   animation-fill-mode: both;
+  flex-wrap: wrap;
 }
 
 .role-text {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 4vw, 1.25rem);
   color: var(--text-secondary);
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .role-animation {
   height: 1.8rem;
   overflow: hidden;
   margin-top: -0.25rem;
-  min-width: 280px;
+  min-width: clamp(200px, 50vw, 280px);
+  max-width: 100%;
 }
 
 .role-item {
@@ -302,18 +305,26 @@
 
   .hero-role {
     margin-bottom: 1.5rem;
-    gap: 0.5rem;
+    gap: 0.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .role-text {
+    font-size: 1.1rem;
   }
 
   .role-animation {
     height: 2.1rem;
     margin-top: 0;
-    min-width: 220px;
+    min-width: clamp(180px, 60vw, 220px);
+    max-width: 100%;
   }
 
   .role-item {
-    padding: 0 0.5rem;
-    font-size: 1.125rem;
+    padding: 0 0.4rem;
+    font-size: 1.1rem;
   }
 
   .hero-description p {
@@ -349,17 +360,24 @@
 
   .hero-role {
     margin-bottom: 1.25rem;
-    gap: 0.25rem;
+    gap: 0.1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .role-text {
+    font-size: 1rem;
   }
 
   .role-animation {
     height: 2.2rem;
-    min-width: 200px;
+    min-width: clamp(160px, 70vw, 200px);
+    max-width: 100%;
   }
 
   .role-item {
     font-size: 1rem;
-    padding: 0 0.25rem;
+    padding: 0 0.3rem;
   }
 
   .hero-description p {
@@ -380,15 +398,42 @@
     font-size: 2rem;
   }
 
+  .hero-role {
+    gap: 0.05rem;
+  }
+
+  .role-text {
+    font-size: 0.95rem;
+  }
+
   .role-animation {
-    min-width: 180px;
+    min-width: clamp(140px, 75vw, 180px);
+    max-width: 100%;
+    height: 2rem;
   }
 
   .role-item {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    padding: 0 0.25rem;
   }
 
   .hero-description p {
     font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .role-text {
+    font-size: 0.9rem;
+  }
+
+  .role-animation {
+    min-width: clamp(120px, 80vw, 160px);
+    height: 1.9rem;
+  }
+
+  .role-item {
+    font-size: 0.9rem;
+    padding: 0 0.2rem;
   }
 }
