@@ -76,7 +76,7 @@
 }
 
 .hero-name {
-  font-size: 4rem;
+  font-size: clamp(2rem, 7vw, 4rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
   animation: fadeInUp 0.8s ease 0.2s;
@@ -109,7 +109,7 @@
 }
 
 .role-animation {
-  height: 1.5rem;
+  height: 1.8rem;
   overflow: hidden;
   margin-top: -0.25rem;
   min-width: 280px;
@@ -123,7 +123,7 @@
   font-weight: 600;
   animation: slide 6s infinite;
   white-space: nowrap;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 4.2vw, 1.25rem);
 }
 
 .hero-description {
@@ -306,9 +306,9 @@
   }
 
   .role-animation {
-    height: 2rem;
+    height: 2.1rem;
     margin-top: 0;
-    min-width: 240px;
+    min-width: 220px;
   }
 
   .role-item {
@@ -333,7 +333,8 @@
   }
 
   .stat-link {
-    min-width: 180px;
+    min-width: 160px;
+    padding: 1.1rem;
   }
 }
 
@@ -352,7 +353,7 @@
   }
 
   .role-animation {
-    height: 2.25rem;
+    height: 2.2rem;
     min-width: 200px;
   }
 
@@ -366,7 +367,7 @@
   }
 
   .contact-item {
-    padding: 0.625rem 1rem;
+    padding: 0.55rem 0.9rem;
   }
 
   .stat-number {

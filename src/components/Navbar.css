@@ -12,7 +12,7 @@
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
   box-shadow: var(--shadow-subtle);
   padding: 15px 0;
@@ -146,9 +146,9 @@
     height: 100vh;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
-    padding: 80px 20px 20px;
+    padding: 72px 16px 16px;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     transition: all 0.4s ease;
     box-shadow: var(--shadow-large);
     border-left: var(--border-subtle);
@@ -161,8 +161,8 @@
   .navbar-links a {
     width: 100%;
     text-align: left;
-    padding: 12px 20px;
-    font-size: 1rem;
+    padding: 12px 16px;
+    font-size: 0.95rem;
     border-radius: 8px;
     background: var(--background-card);
     border: var(--border-subtle);
@@ -181,7 +181,7 @@
   }
 
   .logo-text {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -198,11 +198,11 @@
   .navbar-links {
     width: 100%;
     max-width: none;
-    padding: 70px 15px 20px;
+    padding: 64px 12px 16px;
   }
 
   .navbar-links a {
-    padding: 10px 16px;
+    padding: 10px 14px;
     font-size: 0.9rem;
   }
 
