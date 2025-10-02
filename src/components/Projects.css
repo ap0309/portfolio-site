@@ -306,6 +306,10 @@
     padding: 60px 0;
   }
 
+  .projects-container {
+    padding: 0 16px;
+  }
+
   .section-title {
     font-size: 2rem;
     margin-bottom: 40px;
@@ -317,7 +321,8 @@
   }
 
   .project-card {
-    padding: 24px;
+    padding: 20px;
+    margin: 0 4px;
   }
 
   .project-icon {
@@ -331,6 +336,12 @@
 
   .project-content h3 {
     font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .project-links {
@@ -342,26 +353,7 @@
   .github-link {
     justify-content: center;
     padding: 8px 14px;
-  }
-
-  .circle-1 {
-    width: 150px;
-    height: 150px;
-  }
-
-  .circle-2 {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .project-card {
-    padding: 20px;
-  }
-
-  .project-content h3 {
-    font-size: 1.125rem;
+    font-size: 0.8rem;
   }
 
   .tech-tag {
@@ -369,9 +361,109 @@
     padding: 4px 10px;
   }
 
+  .circle-1 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .circle-2 {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects {
+    padding: 40px 0;
+  }
+
+  .projects-container {
+    padding: 0 12px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+
+  .project-card {
+    padding: 16px;
+    margin: 0 2px;
+  }
+
+  .project-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .project-icon i {
+    font-size: 1.125rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.125rem;
+    line-height: 1.2;
+  }
+
+  .project-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
   .demo-link,
   .github-link {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .projects-container {
+    padding: 0 8px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .project-card {
+    padding: 12px;
+    margin: 0;
+  }
+
+  .project-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-icon i {
+    font-size: 1rem;
+  }
+
+  .project-content h3 {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .project-content p {
     font-size: 0.8rem;
-    padding: 8px 12px;
+    line-height: 1.3;
+  }
+
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  .demo-link,
+  .github-link {
+    font-size: 0.7rem;
+    padding: 5px 10px;
   }
 }
